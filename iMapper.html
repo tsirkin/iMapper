@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<title></title>
+<script src="raphael.js"></script>
+ <style>
+    #wrapper {
+        position: relative;
+        width: 240px;
+        height: 320px;
+        padding: 0;
+        outline: 1px solid #999;
+    }
+    #wrapper img {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    #canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    </style>
+<script>
+function init() {
+        var paper = Raphael(document.getElementById("canvas"), 240, 320);
+        var c = paper.path("M91 175 L95 181 L99 170 L106 179 L112 172 L114 180" +
+                           " L119 175 L125 182 L131 171 L136 179 L140 173 L144 176" +
+                           " M73 113 L77 110 L80 114 L83 110 L88 113 L91 111" +
+                           " L93 115 L97 110 L99 113 L103 110 L107 114" +
+                           " M128 112 L136 109 L139 115 L144 110 L147 114" +
+                           " L150 111 L154 114 L156 117 L160 111");
+        c.attr("stroke", "#000");
+        c.attr("stroke-width", "5px");
+    }
+</script>
+</head>
+
+<body  onload="init()">
+<div id="wrapper">
+        <img src="map-1-page-001.jpg"  width="400px" height="600px">
+        <div id="canvas">
+            
+        </div>
+    </div>
+<!-- <img src="map-1-page-001.jpg" width="500px" height="500px"> -->
+
+
+
+</body> </html>
